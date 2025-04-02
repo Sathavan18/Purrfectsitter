@@ -23,16 +23,20 @@ dist-ssr
 *.sln
 *.sw?
 
+# macOS system files
+.DS_Store
+
 # Python
-__pycache__/
 *.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django
 db.sqlite3
 
 # Node
 node_modules/
-
-# Environment
-.env
-
-# OS
-.DS_Store
+dist/
+build/
+.vite/
