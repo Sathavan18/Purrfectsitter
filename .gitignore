@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.sqlite3
+.env
+.env.*
+
+# Django migrations (optional to ignore compiled migration files)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Node modules
+node_modules/
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Logs
+*.log
+
+# VSCode config (optional)
+.vscode/
+
+# OS/Editor backups
+*.swp
+*~
