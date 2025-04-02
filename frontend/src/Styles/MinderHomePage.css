@@ -1,0 +1,283 @@
+/* Page Background */
+.container {
+  background: linear-gradient(to bottom, #FF90D5, #ffffff);
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #FF90D5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 7vh;
+}
+
+/* Profile Icon */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  gap: 50px;
+  padding: 20px;
+}
+
+/* 2x2 grid for the 4 square boxes */
+.left-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Square boxes */
+.grid-box {
+  width: 300px;
+  height: 300px;
+  background-color: #ff9595cc;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Unique Backgrounds for Each Grid Box */
+.edit-profile-box {
+  background-image: url('/src/Images/edit.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.set-preferences-box {
+  background-image: url('/src/Images/Settings.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-ratings-box {
+  background-image: url('/src/Images/review.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.issue-complaint-box {
+  background-image: url('/src/Images/report.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.grid-box:hover {
+  background-color: #ffffff00;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+/* Booking Box */
+.manage-booking-box {
+  width: 200px;
+  height: 617px; /* 2x square height + gap */
+  background-image: url('/src/Images/Manage\ Booking\ Frame\ \(1\).png');
+  background-size: cover;         /* Ensures entire image fits */
+  background-repeat: no-repeat;     /* Stops the image from repeating */
+  background-position: center;
+  background-color: #ff9595cc;
+  border: 2px solid #000000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manage-booking-box:hover {
+  background-color: #ffffff00;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Cards Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ff9999;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Empty Box */
+.empty-box {
+  width: 200px;
+  height: 300px;
+  background: #ff9999;
+  border-radius: 10px;
+}
+
+.logo-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  padding: 6px 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-search {
+  cursor: pointer;
+}
+
+.search-text {
+  position: relative;
+  font-size: 16px;
+  color: white;
+  padding-bottom: 4px;
+}
+
+.search-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000; /* green underline */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.nav-search:hover .search-text::after {
+  transform: scaleX(1);
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* 🔥 this centers vertically */
+  z-index: 9999;
+}
+
+.modal {
+  background: #fff0fa;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #FF90D5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Notification Icon */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  margin-right: 15px;
+}
+
+/* Red Circle for Notification Count */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

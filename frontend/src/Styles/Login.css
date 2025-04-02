@@ -1,0 +1,330 @@
+/* General container styles */
+html, body {
+    min-width: 450px;
+    overflow-x: hidden; /* Hide horizontal scrollbar if it appears */
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+}
+
+#root{
+    padding: 0;
+    margin: 0;
+}
+
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 50vw;
+    height: 100vh;
+    background: #FF90D5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    margin-right: 60px;
+    margin-top: 50px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-right: 80px;
+}
+
+/* Sidebar button styles */
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 100%;
+    justify-content: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background: #E481BE;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* Login Form */
+.login-form {
+    flex: 1;
+    background: white;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 350px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* Form Elements */
+.login-title {
+    color: #353535;
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.error-box {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #d8000c;
+}
+
+.form-input {
+    color: black;
+    width: 90%;
+    max-width: 40vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px #808080 solid;
+    background-color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.login-button {
+    width: 90%;
+    max-width: 40vw;
+    height: 20%;
+    background: #FF90D5;
+    border-radius: 50px;
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.signup-link, .forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.signup-link span, .forgot-password {
+    color: #0069FF;
+}
+
+.login-form-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+/* -------------------- Responsive Design -------------------- */
+
+/* Tablets and small screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .login-form {
+        left: 300px;
+        padding: 15px;
+    }
+
+    .login-title {
+        font-size: 36px;
+    }
+
+    .input-field,
+    .login-button {
+        max-width: 450px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .login-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-buttons span, .sidebar-bottom span{ 
+        font-size: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 480px;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar-top{
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebar-buttons, .sidebar-bottom {
+        flex-direction: row;
+        gap: 10px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .sidebar-button {
+        padding: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-form {
+        width: 100%;
+        left: 0;
+        position: relative;
+        border-radius: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .login-title {
+        font-size: 30px;
+    }
+
+    .input-field,
+    .login-button {
+        width: 90%;
+    }
+}
+
+/* Small mobile screens (max-width: 610px) */
+@media (max-width: 610px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    .sidebar-buttons, .sidebar-bottom, .sidebar-buttons button, .sidebar-bottom button {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-top {
+        flex-direction: column;
+    }
+
+
+    .login-title {
+        font-size: 26px;
+    }
+
+    .input-field,
+    .login-button {
+        width: 95%;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .login-button {
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .login-form {
+        width: 100%;
+        border-radius: 0;
+        flex-grow: 1;
+    }
+
+    .success-box {
+    background-color: #28a745; /* Green color */
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+}

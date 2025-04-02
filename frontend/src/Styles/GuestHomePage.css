@@ -1,0 +1,151 @@
+/* Page Background */
+.container {
+    background: linear-gradient(to bottom, #ff99cc, #ffffff);
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #FF90D5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 10vh;
+  }
+  
+  /* Logo Button */
+  .logo-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Profile Icon */
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Search */
+  .nav-search {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    position: relative;
+  }
+  
+  .search-text {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 4px;
+  }
+  
+  .search-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-search:hover .search-text::after {
+    transform: scaleX(1);
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .nav-links button:hover {
+    text-decoration: underline;
+  }
+
+/* Hero Section with Background Image */
+.hero-section {
+    width: 100%;
+    height: 70vh;
+    background-image: url(/src/Images/th-blog-cats-and-dogs-living-together.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-overlay {
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    padding: 40px 60px;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .hero-overlay p {
+    font-size: 18px;
+  }
+  
+  
+  /* Bottom Info Boxes */
+  .info-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+  }
+  
+  .info-box {
+    width: 300px;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: black;
+  }
+  
+  .info-box h2 {
+    margin-bottom: 10px;
+    color: #ff4eb5;
+  }
+
+  .info-box ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .info-box li {
+    margin-bottom: 8px;
+  }

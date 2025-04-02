@@ -1,0 +1,92 @@
+/* Booking.css */
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: white;
+}
+
+.booking-form {
+    background: #FF90D5;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+}
+
+.booking-form h1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+.booking-form input, .booking-form select {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+}
+
+.booking-form button {
+    padding: 12px;
+    font-size: 20px;
+    color: white;
+    background: #E481BE;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background: #D070A5;
+}
+
+.minders-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.minder-card {
+    padding: 15px;
+    border: 2px solid #FF90D5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.minder-card p {
+    font-size: 20px;
+    color: #353535;
+}
+
+.minder-card a {
+    text-decoration: none;
+    padding: 8px 16px;
+    background: #FF90D5;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.minder-card a:hover {
+    background: #E481BE;
+}
+
+
+.booking-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.booking-content {
+    margin-left: 250px; 
+    padding: 40px;
+    flex-grow: 1;
+}

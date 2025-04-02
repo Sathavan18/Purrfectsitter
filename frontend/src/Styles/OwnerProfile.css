@@ -1,0 +1,125 @@
+/* Main Layout */
+.owner-home-container {
+  display: flex; /* Flex layout for sidebar + content */
+  min-height: 100vh; /* Full viewport height */
+  background: white; /* Consistent background */
+}
+
+/* Main Content - Adjusted for Sidebar */
+.owner-main-content {
+  margin-left: 500px; /* Offset for sidebar */
+  padding: 20px; /* Consistent padding */
+  flex-grow: 1; /* Occupy remaining space */
+  box-sizing: border-box; /* Ensure padding doesn't expand the content */
+}
+
+/* Header */
+h1 {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 32px;
+  text-align: center;
+}
+
+/* Pet Profile Form */
+.pet-form {
+  background: #FF90D5;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px; /* Limit form width */
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Inputs */
+.pet-form input,
+.pet-form select {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.pet-form input, .pet-form select
+{
+  border-color: #FF90D5; /* Matches owner-homepage colors */
+  color: #333; /* Ensure the text remains dark on focus */
+}
+
+/* Submit Button */
+.pet-form button {
+  padding: 12px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #E481BE;
+  color: white;
+  transition: background 0.3s;
+}
+
+.pet-form button:hover {
+  background: #D070A5;
+}
+
+/* Secondary Button */
+.secondary-button {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #FF90D5;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+.secondary-button:hover {
+  background: #E481BE; /* Hover effect */
+}
+
+/* Error Box */
+.error-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Smaller sidebar */
+  }
+
+  .owner-main-content {
+      margin-left: 200px; /* Adjusted for sidebar */
+  }
+
+  .pet-form {
+      max-width: 400px; /* Reduce form size */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 120px; /* Compact sidebar */
+  }
+
+  .owner-main-content {
+      margin-left: 120px; /* Match sidebar */
+      padding: 20px; /* Adjust padding */
+  }
+
+  .pet-form {
+      max-width: 300px; /* Smaller form */
+  }
+}

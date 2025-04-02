@@ -1,0 +1,125 @@
+/* Main Layout */
+.minder-profile-container {
+  display: flex; /* Flex layout for sidebar + content */
+  min-height: 100vh; /* Full viewport height */
+  background: white; /* Consistent background */
+}
+
+/* Main Content - Adjusted for Sidebar */
+.minder-main-content {
+  margin-left: 500px; /* Offset for sidebar */
+  padding: 20px; /* Consistent padding */
+  flex-grow: 1; /* Occupy remaining space */
+  box-sizing: border-box; /* Ensure padding doesn't expand the content */
+}
+
+/* Header */
+.minder-main-content h1 {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 32px;
+  text-align: center;
+}
+
+/* Minder Profile Form */
+.minder-form {
+  background: #FF90D5;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px; /* Limit form width */
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Inputs */
+.minder-form input,
+.minder-form textarea {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.minder-form input,
+.minder-form textarea {
+  border-color: #FF90D5; /* Matches owner-homepage colors */
+  color: #333; /* Ensure the text remains dark on focus */
+}
+
+/* Submit Button */
+.minder-form button {
+  padding: 12px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #E481BE;
+  color: white;
+  transition: background 0.3s;
+}
+
+.minder-form button:hover {
+  background: #D070A5;
+}
+
+/* Secondary Button */
+.secondary-button {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #FF90D5;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+.secondary-button:hover {
+  background: #E481BE; /* Hover effect */
+}
+
+/* Error Box */
+.error-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .minder-profile-container {
+    margin-left: 200px; /* Adjusted for sidebar */
+  }
+
+  .minder-main-content {
+    margin-left: 200px;
+  }
+
+  .minder-form {
+    max-width: 400px; /* Reduce form size */
+  }
+}
+
+@media (max-width: 480px) {
+  .minder-profile-container {
+    margin-left: 120px; /* Adjusted for smaller screen */
+  }
+
+  .minder-main-content {
+    margin-left: 120px;
+  }
+
+  .minder-form {
+    max-width: 300px; /* Smaller form */
+  }
+}
+
